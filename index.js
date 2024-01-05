@@ -1,11 +1,10 @@
 // TODO: Include packages needed for this application
-var inquirer = request('inquirer');
-var fs = request('fs');
+var inquirer = require('inquirer');
+var fs = require('fs');
 
 // TODO: Create an array of questions for user input
-const questions = [
-    inquirer
-        .prompt([
+const questions = () => {
+    return inquirer.prompt([
             {
                 type: 'input',
                 name: 'title',
@@ -69,15 +68,78 @@ const questions = [
                 type: 'input',
                 name: 'solution',
                 message: 'How can other developers run those tests here?',
+            },
+            {
+                type: 'input',
+                name: 'Github',
+                message: 'What is your Github username?'
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'What is a good email that other developers can email you with questions on your projects?'
             }
         ])
-];
+}
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(title, description, installation, usage, credits, license, contribute, solution, Github, email) {
+    const readMeContent =
+`# ${title}
+
+## Description
+
+${description}
+
+## Table of Contents
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
+## Installation
+
+${installation}
+
+## Usage
+
+${usage}
+
+## Credits
+
+${credits}
+
+## License
+
+${badge}\b
+${license}
+
+---
+
+## How to Contribute
+
+${contribute}
+
+Contact me with sugestions
+
+Github: ${Github}
+Email: ${email}
+
+## Tests
+
+${solution}`
+;
+fs.writeFileSync('README.md', readMeContent);
+}
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() { 
+    questions()
+    .then(() => console.log('ReadMe.md file created successfully'))
+    .catch((error) => console.log(error));
+}
 
 // Function call to initialize app
 init();
