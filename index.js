@@ -38,7 +38,7 @@ const questions = () => {
                     'GNU General Public License v3.0',
                     'MIT License',
                     'BSD 2-Clause "simplified" License',
-                    'BSD 3-cLAUSE "NEW" or "Revised" License',
+                    'BSD 3-Clause "NEW" or "Revised" License',
                     'Boost Software License 1.0',
                     'Creative Commons Zerro v1.0 Universal',
                     'Eclipse Public License 2.0',
