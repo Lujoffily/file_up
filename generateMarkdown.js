@@ -3,6 +3,7 @@
 function renderLicenseBadge(license) {
 
   const licenseBadgeUrl = {
+    'Apache License 2.0': 'https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0',
     'GNU General Public License v3.0': 'https://img.shields.io/badge/License-GPLv3-blue.svg',
     'MIT License': 'https://img.shields.io/badge/License-MIT-yellow.svg',
     'BSD 2-Clause "simplified" License': 'https://img.shields.io/badge/License-BSD_2--Clause-orange.svg',

@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
-var inquirer = require('inquirer');
-var fs = require('fs');
+import inquirer from 'inquirer';
+import fs from 'fs';
+import generateMarkdown from './generateMarkdown';
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -83,13 +84,16 @@ const questions = () => {
 }
 
 // TODO: Create a function to write README file
-function writeToFile(title, description, installation, usage, credits, license, contribute, solution, Github, email) {
+function writeToFile(answers) {
+    const licenseBadge = fs.readFile(generateMarkdown '');
+
     const readMeContent =
-`# ${title}
+`
+# ${answers.title} ${licenseBadge}
 
 ## Description
 
-${description}
+${answers.description}
 
 ## Table of Contents
 
@@ -101,43 +105,41 @@ ${description}
 
 ## Installation
 
-${installation}
+${answers.installation}
 
 ## Usage
 
-${usage}
+${answers.usage}
 
 ## Credits
 
-${credits}
-
-## License
-
-${badge}\b
-${license}
+${answers.credits}
 
 ---
 
 ## How to Contribute
 
-${contribute}
+${answers.contribute}
 
 Contact me with sugestions
 
-Github: ${Github}
-Email: ${email}
+Github: ${answers.Github}
+Email: ${answers.email}
 
 ## Tests
 
-${solution}`
+${answers.solution}`
 ;
 fs.writeFileSync('README.md', readMeContent);
+console.log('ReadMe.md file created successfully');
 }
 
 // TODO: Create a function to initialize app
 function init() { 
     questions()
-    .then(() => console.log('ReadMe.md file created successfully'))
+    .then((answers) => {
+        writeToFile(answers);
+    })
     .catch((error) => console.log(error));
 }
 
