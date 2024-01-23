@@ -16,19 +16,31 @@ const questions = () => {
                 message: 'What is the description of your project?',
             },
             {
-                type: 'input',
+                type: 'confirm',
                 name: 'installation',
                 message: 'Is there any installation needed for your project?',
             },
             {
                 type: 'input',
-                name: 'usage',
-                message: 'Give a explanation of how your project workds?',
+                name: 'instal',
+                message: 'How can users install the application?',
+                when: (answers) => answers.installation,
             },
             {
                 type: 'input',
+                name: 'usage',
+                message: 'Give a explanation of how your project works?',
+            },
+            {
+                type: 'confirm',
                 name: 'credits',
                 message: 'Did you collaborate with anyone on this project?',
+            },
+            {
+                type: 'input',
+                name: 'collaboratores',
+                message: 'What is the Github username for the person/people that collaborated on this project?',
+                when: (answers) => answers.credits,
             },
             {
                 type: 'list',
@@ -75,6 +87,11 @@ const questions = () => {
             },
             {
                 type: 'input',
+                name: 'GithubURL',
+                message: `What's the link for your github?`
+            },
+            {
+                type: 'input',
                 name: 'email',
                 message: 'What is a good email that other developers can email you with questions on your projects?'
             }
@@ -107,7 +124,7 @@ ${answers.description}
 
 ## Installation
 
-${answers.installation}
+${answers.instal}
 
 ## Usage
 
@@ -115,7 +132,7 @@ ${answers.usage}
 
 ## Credits
 
-${answers.credits}
+${answers.collaboratores}
 
 ## License
 
@@ -129,7 +146,7 @@ ${answers.contribute}
 
 Contact me with sugestions
 
-Github: ${answers.Github}
+${answers.Github} [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](${answers.GithubUrl})
 Email: ${answers.email}
 
 ## Tests
