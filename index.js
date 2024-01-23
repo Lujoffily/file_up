@@ -1,7 +1,6 @@
 // TODO: Include packages needed for this application
 import inquirer from 'inquirer';
 import fs from 'fs';
-import generateMarkdown from './generateMarkdown';
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -35,19 +34,17 @@ const questions = () => {
                 type: 'list',
                 name: 'license',
                 message: 'What liscense would you like to use it?',
-                choices: ['Apache License 2.0',
-                    'GNU General Public License v3.0',
-                    'MIT License',
-                    'BSD 2-Clause "simplified" License',
-                    'BSD 3-Clause "NEW" or "Revised" License',
-                    'Boost Software License 1.0',
-                    'Creative Commons Zerro v1.0 Universal',
-                    'Eclipse Public License 2.0',
-                    'GNU Affero General Public License v3.0',
-                    'GNU General Public License v2.0',
-                    'GNU Lesser General Public License v2.1',
-                    'Mozilla Public License 2.0',
-                    'The Unlicense'],
+                choices: ['ApacheLicense2.0',
+                    'GNU3',
+                    'MIT',
+                    'BSD2',
+                    'BSD3',
+                    'Boost',
+                    'GNU2',
+                    'GNU2.1',
+                    'Mozilla2',
+                    'Unlicense'
+                ],
             },
             {
                 type: 'confirm',
@@ -69,6 +66,7 @@ const questions = () => {
                 type: 'input',
                 name: 'solution',
                 message: 'How can other developers run those tests here?',
+                when: (answers) => answers.test,
             },
             {
                 type: 'input',
@@ -83,13 +81,17 @@ const questions = () => {
         ])
 }
 
+function renderLicenseBadge(license) {
+    return `![license](https://img.shields.io/badge/License-${license}-blue.svg)`
+}
+
 // TODO: Create a function to write README file
 function writeToFile(answers) {
-    const licenseBadge = fs.readFile(generateMarkdown '');
 
     const readMeContent =
 `
-# ${answers.title} ${licenseBadge}
+${renderLicenseBadge(answers.license)}
+# ${answers.title} 
 
 ## Description
 
@@ -114,6 +116,10 @@ ${answers.usage}
 ## Credits
 
 ${answers.credits}
+
+## License
+
+${answers.license} license is the license being used for this project.
 
 ---
 
