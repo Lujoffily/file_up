@@ -16,16 +16,9 @@ This application was created with the intent to make it easier for developers to
 
 ## Installation
 
-<<<<<<< HEAD
-true
-
-(https://github.com/Lujoffily/file_up)
-https://drive.google.com/file/d/11TFrxJyrZnmp_fs13ePOyhIG8zULXuQL/view
-=======
 To instal the application you will need to click on the ReadMe Generater Download Link down bellow, you will click on the clone and you can choose to ether download a ziped file or clone the application your terminal. If you have any question please follow the installation assist videos.
 
-(https://github.com/Lujoffily/file_up)
->>>>>>> e01e3fa2f11a7a0dbfce713061e2caf57bad7acd
+[![README Generator Download Link](https://github.com/Lujoffily/file_up)]
 
 ## Usage
 
@@ -33,11 +26,7 @@ After downloading the application to your computer to use it you will have to op
 
 ## Credits
 
-<<<<<<< HEAD
-false
-=======
 No collaborations on this application?
->>>>>>> e01e3fa2f11a7a0dbfce713061e2caf57bad7acd
 
 ## License
 
@@ -57,8 +46,4 @@ Email: luna.joffily@gmail.com
 
 ## Tests
 
-<<<<<<< HEAD
 You may do the same test by going though the explanation.
-=======
-You may do the same test by going though the explanation.
->>>>>>> e01e3fa2f11a7a0dbfce713061e2caf57bad7acd
