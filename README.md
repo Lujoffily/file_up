@@ -18,7 +18,7 @@ This application was created with the intent to make it easier for developers to
 
 To instal the application you will need to click on the ReadMe Generater Download Link down bellow, you will click on the clone and you can choose to ether download a ziped file or clone the application your terminal. If you have any question please follow the installation assist videos.
 
-[![README Generator Download Link](https://github.com/Lujoffily/file_up)]
+[README Generator Download Link](https://github.com/Lujoffily/file_up)]
 
 ## Usage
 
