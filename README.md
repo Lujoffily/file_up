@@ -19,10 +19,15 @@ This application was created with the intent to make it easier for developers to
 To instal the application you will need to click on the ReadMe Generater Download Link down bellow, you will click on the clone and you can choose to ether download a ziped file or clone the application your terminal. If you have any question please follow the installation assist videos.
 
 [README Generator Download Link](https://github.com/Lujoffily/file_up)
+[Download Zipped File](https://drive.google.com/file/d/1LzGHr8Z2OMr5vehUQ8HR9m4yWHb0TN0f/view)
+[Clone project](https://drive.google.com/file/d/1LzGHr8Z2OMr5vehUQ8HR9m4yWHb0TN0f/view)
+
 
 ## Usage
 
 After downloading the application to your computer to use it you will have to open it on your choose of editor that you prefer working with (for example VS Code). On the editor you will have to open the editor terminal, make sure you are in the root directory 'index.js'. On the terminal run the command line 'node index.js' and answer the prompted questions. After that the ReadMe.md for your project will be created on the README.md file.
+
+[How to use App](https://drive.google.com/file/d/1z6MFyn0gGwyBde8knyURW0PNnLbC7Prc/view)
 
 ## Credits
 
